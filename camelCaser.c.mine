@@ -1,0 +1,63 @@
+#include "camelCaser.h"
+#include <stddef.h>
+#include <string>
+#define_GNU_SOURCE
+
+void RemoveSpaces(char* source)
+{
+  char* i = source;
+  char* j = source;
+  while(*j != 0)
+  {
+    *i = *j++;
+    if(*i != ' ')
+      i++;
+  }
+  *i = 0;
+}
+
+char **camel_caser(const char *input_str) {
+	if(input_str==NULL)
+	return NULL;
+	char ** result;
+	int num;
+	while(*input_str!='\0'){
+		if(ispunct(*input_str))
+			num++;
+			input_str++;
+		}
+	result=malloc((num+1)*sizeof(char*));
+	result[num]=NULL;
+	int size[];
+	char* p=input_str;
+	for(int i=0;i<num; i++)
+	{
+		while(!ispunct(*p))
+	   	{
+			size[i]++;
+		}
+		p++;
+	}
+    char* q=input_str;
+	for(int i=0; i<num-1;i++)
+	{ 
+		    //char temp[size[i]];
+		    while(!ispunct(*q){
+				strcat(temp,*q);
+				a++;
+			}
+			
+			RemoveSpaces(temp);
+			if(temp[0]>=65 && temp[0]<=90)
+				temp[0]=temp[0]-32;
+			result[i]=malloc((size[i]+1)*sizeof(char));
+			*result=temp;
+			memset(&temp[0], 0, sizeof(temp));//clear the array here
+			q++;
+	}
+	
+	
+	 
+
+  
+}
